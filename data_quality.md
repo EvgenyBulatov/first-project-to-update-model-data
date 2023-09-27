@@ -5,8 +5,7 @@
 
 # для отношения ordertimes 
 
-```
-	id int4 NOT NULL GENERATED ALWAYS AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 		CACHE 1 NO CYCLE),
+```id int4 NOT NULL GENERATED ALWAYS AS IDENTITY( INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 START 1 		CACHE 1 NO CYCLE),
 	product_id int4 NOT NULL,
 	order_id int4 NOT NULL,
 	"name" varchar(2048) NOT NULL,
@@ -20,7 +19,7 @@
 	CONSTRAINT orderitems_quantity_check CHECK ((quantity > 0)),
 	CONSTRAINT orderitems_order_id_fkey FOREIGN KEY (order_id) REFERENCES production.orders(order_id),
 	CONSTRAINT orderitems_product_id_fkey FOREIGN KEY (product_id) REFERENCES production.products(id)
-	```
+```
 
 # для отношения orders
 
